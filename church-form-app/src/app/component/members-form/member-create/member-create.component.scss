@@ -1,0 +1,29 @@
+.form-criar {
+  margin: 26px 50px;
+  display: flex;
+  justify-content: center;
+
+  .visitor {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 8px;
+
+    .visitor, label {
+      margin-left: 8px;
+    }
+  }
+
+  .btn-criar {
+    display: flex;
+    justify-content: flex-end;
+
+    .cancel {
+      min-width: 104px;
+    }
+  }
+
+}
+
+
+
+

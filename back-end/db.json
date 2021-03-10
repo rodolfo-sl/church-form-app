@@ -1,0 +1,31 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Rodolfo Salas de Lima",
+      "cel": "11987070489",
+      "address": "Rua Serrolandia, 17",
+      "age": "29",
+      "conection": "Bethel",
+      "visitor": false
+    },
+    {
+      "id": 2,
+      "name": "Pedro Wallace Magalhas",
+      "cel": "11987099999",
+      "address": "Rua Jesus o Nazareno",
+      "age": "30",
+      "conection": "Bethel",
+      "visitor": false
+    },
+    {
+      "id": 3,
+      "name": "Juliana Mozzart",
+      "cel": "11888899978",
+      "address": "Rua escorpiao, 550 - bloco 17 apto 31",
+      "age": "26",
+      "conection": "",
+      "visitor": true
+    }
+  ]
+}
