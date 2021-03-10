@@ -15,6 +15,13 @@ export class MemberService {
   public create(member: Member): Observable<Member> {
     return this.http.post<Member>(this.baseUrl, member).pipe(
       map((obj: any) => obj)
-    )
+    );
+  }
+
+  public read(): Observable<Member[]> {
+    return this.http.get<Member[]>(this.baseUrl).pipe(
+      map((obj: any) => obj),
+    );
+
   }
 }

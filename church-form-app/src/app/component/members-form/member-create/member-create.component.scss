@@ -1,7 +1,12 @@
+.header-pg {
+  margin: 20px 0 0 122px;
+}
+
 .form-criar {
-  margin: 26px 50px;
+  // margin: 26px 50px;
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 
   .visitor {
     display: flex;
@@ -13,12 +18,14 @@
     }
   }
 
-  .btn-criar {
+  .button-confirm-cancel {
     display: flex;
-    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: -16px;
 
     .cancel {
       min-width: 104px;
+      margin-left: 10px;
     }
   }
 

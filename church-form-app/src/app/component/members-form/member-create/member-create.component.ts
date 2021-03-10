@@ -34,7 +34,8 @@ export class MemberCreateComponent implements OnInit {
       address: ['', [Validators.required, Validators.minLength(1)]],
       age: ['', [Validators.required, Validators.minLength(2)]],
       conection: ['', [Validators.required]],
-      visitor: false
+      visitor: false,
+      status: true
     })
   }
 

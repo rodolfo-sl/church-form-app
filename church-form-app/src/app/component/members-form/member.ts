@@ -7,5 +7,6 @@ export class Member {
     public age: string = '',
     public conection: string = '',
     public visitor?: boolean,
+    public status: boolean = true
   ) { }
 }
