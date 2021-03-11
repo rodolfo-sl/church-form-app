@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MemberUpdateComponent } from './component/members-form/member-update/member-update.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MemberDeleteComponent,
     MemberReadComponent,
     MemberUpdateComponent,
+    HomeComponent,
 
   ],
   imports: [

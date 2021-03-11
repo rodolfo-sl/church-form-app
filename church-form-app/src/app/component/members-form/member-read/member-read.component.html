@@ -2,18 +2,44 @@
   <div class="example-container">
     <h2>MEMBROS ATIVOS</h2>
 
-    <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]"
+    <div class="title-table">
+      <span class="title-name"><strong> Nome </strong></span>
+      <span class="titl-ceel"><strong> WhatsApp </strong></span>
+      <span class="title-age"><strong> Idade </strong></span>
+      <span class="title-conection"><strong> GC </strong></span>
+    </div>
+
+    <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="membersActive" [cdkDropListConnectedTo]="[doneList]"
       class="example-list" (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+      <ng-container *ngFor="let member of membersActive">
+        <div class="example-box" cdkDrag>
+          <span class="name"> {{ member.name | titlecase }} </span>
+          <span class="cel"> {{ member.cel }} </span>
+          <span class="age"> {{ member.age }} </span>
+          <span class="conection"> {{ member.conection }} </span>
+        </div>
+      </ng-container>
     </div>
   </div>
 
   <div class="example-container">
     <h2>MEMBROS INATIVOS</h2>
-
-    <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]"
+    <div class="title-table">
+      <span class="title-name"><strong> Nome </strong></span>
+      <span class="titl-ceel"><strong> WhatsApp </strong></span>
+      <span class="title-age"><strong> Idade </strong></span>
+      <span class="title-conection"><strong> GC </strong></span>
+    </div>
+    <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="membersInactive" [cdkDropListConnectedTo]="[todoList]"
       class="example-list" (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      <ng-container *ngFor="let member of membersInactive">
+        <div class="example-box-inactive" cdkDrag>
+          <span class="name"> {{ member.name | titlecase }} </span>
+          <span class="cel"> {{ member.cel }} </span>
+          <span class="age"> {{ member.age }} </span>
+          <span class="conection"> {{ member.conection }} </span>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>

@@ -3,6 +3,52 @@
   justify-content: center;
   margin-top: 60px;
 
+  .title-table {
+    display: flex;
+    align-items: center;
+    margin-bottom: -4px;
+    border: solid 1px #CCC;
+    border-radius: 5px;
+    height: 62px;
+
+    .title-name {
+      margin-left: 11px;
+    }
+
+    .titl-ceel {
+      margin-left: 260px;
+    }
+
+    .title-age {
+      margin-left: 100px;
+    }
+
+    .title-conection {
+      margin-left: 69px;
+    }
+
+  }
+
+  .name {
+    min-width: 230px;
+    border-right: solid 1px #CCC;
+  }
+
+  .cel {
+    border-right: solid 1px #CCC;
+    min-width: 100px;
+  }
+
+  .age {
+    border-right: solid 1px #CCC;
+    min-width: 35px;
+  }
+
+  .conection {
+    min-width: 120px;
+  }
+
+
   .example-container {
     width: 710px;
     max-width: 100%;
@@ -31,6 +77,20 @@
     box-sizing: border-box;
     cursor: move;
     background: white;
+    font-size: 14px;
+  }
+
+  .example-box-inactive {
+    padding: 20px 10px;
+    border-bottom: solid 1px #ccc;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: #F9F9F9;
     font-size: 14px;
   }
 

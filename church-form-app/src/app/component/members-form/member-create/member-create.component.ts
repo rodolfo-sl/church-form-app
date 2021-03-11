@@ -21,8 +21,8 @@ export class MemberCreateComponent implements OnInit {
 
   public createMember(): void {
     this.memberService.create(this.memberForm.value).subscribe(() => {
-      // this.router.navigate([''])
-      this.initialValues()
+      this.initialValues();
+      this.router.navigate(["/member-list"]);
 
     })
   }

@@ -1,6 +1,6 @@
 import { MemberService } from './../member.service';
 import { Component, OnInit } from '@angular/core';
-import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Member } from '../member';
 
 @Component({
@@ -11,40 +11,34 @@ import { Member } from '../member';
 export class MemberReadComponent implements OnInit {
 
   public members: Array<Member> = [];
-
-  todo = [
-    'Get to work',
-    'Pick up groceries',
-    'Go home',
-    'Fall asleep'
-  ];
-
-  done = [
-    'Get up',
-    'Brush teeth',
-    'Take a shower',
-    'Check e-mail',
-    'Walk dog'
-  ];
+  public membersActive: Array<Member> = [];
+  public membersInactive: Array<Member> = [];
 
   constructor(private memberService: MemberService) { }
 
   ngOnInit(): void {
     this.memberService.read().subscribe((members) => {
       this.members = members
-      console.log('lista', this.members);
-    })
+      this.filterActiveEndInactive();
+    });
 
   }
 
-  drop(event: CdkDragDrop<string[]>) {
+  public filterActiveEndInactive() {
+    this.membersActive = this.members.filter((member) => member.status === true);
+    this.membersInactive = this.members.filter((member) => member.status === false);
+    this.membersActive.sort((a, b) => a.name.localeCompare(b.name));
+    this.membersInactive.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  drop(event: CdkDragDrop<any[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
       transferArrayItem(event.previousContainer.data,
-                        event.container.data,
-                        event.previousIndex,
-                        event.currentIndex);
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
     }
   }
 
