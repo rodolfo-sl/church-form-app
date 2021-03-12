@@ -15,6 +15,8 @@ import { MemberUpdateComponent } from './component/members-form/member-update/me
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { HomeComponent } from './component/home/home.component';
+import { NgxMaskModule } from 'ngx-mask';
+import { MemberCreateMobileComponent } from './component/mobile/member-create-mobile/member-create-mobile.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { HomeComponent } from './component/home/home.component';
     MemberReadComponent,
     MemberUpdateComponent,
     HomeComponent,
+    MemberCreateMobileComponent,
 
   ],
   imports: [
@@ -34,7 +37,8 @@ import { HomeComponent } from './component/home/home.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+    NgxMaskModule.forRoot()
 
   ],
   providers: [ MemberService],

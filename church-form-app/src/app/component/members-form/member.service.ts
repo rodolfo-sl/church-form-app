@@ -1,3 +1,4 @@
+import { Conection } from './conection';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Member } from "./member";
@@ -8,7 +9,8 @@ import { Injectable } from "@angular/core";
 
 export class MemberService {
 
-  public baseUrl: string = 'http://localhost:3001/members'
+  public baseUrl: string = 'http://localhost:3001/members';
+  public conectionsUrl: string = "http://localhost:3002/conections";
 
   constructor( private http: HttpClient) {}
 
@@ -22,6 +24,11 @@ export class MemberService {
     return this.http.get<Member[]>(this.baseUrl).pipe(
       map((obj: any) => obj),
     );
+  }
 
+  public readConections(): Observable<[Conection]> {
+    return this.http.get<Conection[]>(this.conectionsUrl).pipe(
+      map((obj: any) => obj)
+    )
   }
 }
