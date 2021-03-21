@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     margin-bottom: -4px;
-    border: solid 1px #CCC;
+    border: solid 1px #ccc;
     border-radius: 5px;
     height: 62px;
 
@@ -26,28 +26,26 @@
     .title-conection {
       margin-left: 67px;
     }
-
   }
 
   .name {
     min-width: 230px;
-    border-right: solid 1px #CCC;
+    border-right: solid 1px #ccc;
   }
 
   .cel {
-    border-right: solid 1px #CCC;
+    border-right: solid 1px #ccc;
     min-width: 100px;
   }
 
   .age {
-    border-right: solid 1px #CCC;
+    border-right: solid 1px #ccc;
     min-width: 35px;
   }
 
   .conection {
     min-width: 120px;
   }
-
 
   .example-container {
     width: 700px;
@@ -90,7 +88,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     cursor: move;
-    background: #F9F9F9;
+    background: #f9f9f9;
     font-size: 14px;
   }
 

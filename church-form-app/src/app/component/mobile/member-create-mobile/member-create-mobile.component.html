@@ -1,5 +1,71 @@
-<app-nav></app-nav>
-<div class="member-create">
-  <app-member-create></app-member-create>
+<div class="header-pg">
+  <h1>Cadastro de Membros</h1>
+</div>
 
+<div class="col-sm-12 form-criar">
+  <form class="row" [formGroup]="memberForm">
+
+    <div class="col-sm-2 campos">
+      <label for="inputName" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="inputName" placeholder="" formControlName="name" [ngClass]="{'is-invalid': (memberForm.get('name')?.touched ||
+      memberForm.get('name')?.dirty) &&
+      !memberForm.get('name')?.valid }"/>
+
+      <span class="invalid-feedback">
+        <span *ngIf="memberForm.get('name')?.errors?.required">
+          Por favor digite seu nome.
+        </span>
+        <span *ngIf="memberForm.get('name')?.errors?.minlength">
+          O nome é muito curto.
+        </span>
+        <span *ngIf="memberForm.get('name')?.errors?.maxlength">
+          O nome é muito cumprido.
+        </span>
+      </span>
+    </div>
+
+    <div class="col-sm-2 campos">
+      <label for="inputPhone" class="form-label">Celular</label>
+      <input type="text" class="form-control" id="inputPhone" placeholder="" formControlName="cel" mask="(00)  00000-0000" [ngClass]="{'is-invalid': (memberForm.get('cel')?.touched ||
+      memberForm.get('cel')?.dirty) &&
+      !memberForm.get('cel')?.valid }"/>
+    </div>
+
+    <div class="col-sm-2 campos">
+      <label for="inputAddress" class="form-label">Endereço</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="" formControlName="address" [ngClass]="{'is-invalid': (memberForm.get('address')?.touched ||
+      memberForm.get('address')?.dirty) &&
+      !memberForm.get('address')?.valid }"/>
+    </div>
+
+    <div class="col-sm-1 campos">
+      <label for="inputAge" class="form-label">Idade</label>
+      <input type="text" class="form-control" id="inputAge" placeholder="" formControlName="age" mask="000" [ngClass]="{'is-invalid': (memberForm.get('age')?.touched ||
+      memberForm.get('age')?.dirty) &&
+      !memberForm.get('age')?.valid }"/>
+    </div>
+
+    <div class="col-md-1 campos">
+      <label for="inputConection" class="form-label">GC</label>
+      <select id="inputConection" class="form-select form-control" formControlName="conection">
+        <option></option>
+        <option *ngFor="let conection of conectionGroup" > {{ conection.name }} </option>
+      </select>
+    </div>
+
+    <div class="col-sm-1 form-check visitor">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" formControlName="visitor" />
+      <label class="form-check-label" for="flexCheckDefault">
+        Visitante
+      </label>
+    </div>
+    <div class="col-auto button-confirm-cancel">
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary" (click)="createMember()" [disabled]="!memberForm.valid">Confirmar</button>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-light cancel"> Cancelar </button>
+      </div>
+    </div>
+  </form>
 </div>

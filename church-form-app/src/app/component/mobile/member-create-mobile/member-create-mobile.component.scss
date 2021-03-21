@@ -1,3 +1,43 @@
-.member-create {
-  margin-left: 20px;
+.header-pg {
+  margin-top: 20px;
+
 }
+
+.form-criar {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+
+  .visitor {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 12px;
+    margin-top: 15px;
+
+    .visitor, label {
+      margin-left: 8px;
+    }
+  }
+
+  .campos {
+    margin-bottom: 14px;
+  }
+
+  .button-confirm-cancel {
+    display: flex;
+    align-items: flex-end;
+    margin-left: -16px;
+    margin-top: 30px;
+    margin-left: 2px;
+
+    .cancel {
+      min-width: 104px;
+      margin-left: 10px;
+    }
+  }
+
+}
+
+
+
+

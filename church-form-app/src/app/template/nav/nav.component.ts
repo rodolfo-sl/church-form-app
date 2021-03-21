@@ -13,8 +13,12 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public goToMemberCreat() {
-    this.router.navigate(['/member-creat-mobile']);
+  public goToMobileHome() {
+    this.router.navigate(['/member-creat-mobile-home']);
+  }
+
+  public goToFormETable() {
+    this.router.navigate(['/member-creat-form-teble']);
   }
 
 }
